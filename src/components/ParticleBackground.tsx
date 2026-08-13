@@ -1,7 +1,7 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
-import type { Container, Engine } from '@tsparticles/engine';
+import type { Engine } from '@tsparticles/engine';
 
 const ParticleBackground = () => {
     const [init, setInit] = useState(false);
@@ -14,7 +14,7 @@ const ParticleBackground = () => {
         });
     }, []);
 
-    const particlesLoaded = useCallback(async (container?: Container) => {
+    const particlesLoaded = useCallback(async () => {
         // console.log(container);
     }, []);
 

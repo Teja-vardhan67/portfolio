@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { Briefcase, Calendar, MapPin } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
@@ -6,64 +6,28 @@ import GlitchText from '../components/GlitchText';
 
 const experiences = [
     {
-        role: "Infosys Springboard Virtual Intern",
-        company: "Infosys Springboard (Batch 6.0)",
-        duration: "Present",
+        role: "Full Stack Intern",
+        company: "Infosys SpringBoard Virtual Internship 6.0",
+        duration: "Feb 2026 – Apr 2026",
         location: "Remote",
         description: [
-            "Currently participating in the Infosys Springboard Virtual Internship 6.0 (Batch 13).",
-            "Focused on Full-Stack Development and emerging technologies.",
-            "Gaining hands-on experience through project-based learning and industry-standard mentorship."
+            "Built InsureAI, a full-stack insurance platform with role-based dashboards and JWT authentication.",
+            "Implemented real-time conflict detection for policy management workflows.",
+            "Designed and integrated Oracle DB backend for secure, scalable data operations."
         ],
-        tech: ["Full-Stack", "Java/Python", "Springboard"]
+        tech: ["Full-Stack", "JWT", "Oracle DB", "React", "InsureAI"]
     },
     {
-        role: "Cisco VIP Virtual Internship",
-        company: "Network Automation & Simulation Tool",
-        duration: "2025",
+        role: "Networking Intern",
+        company: "Cisco VIP 2025",
+        duration: "Jun 2025 – Aug 2025",
         location: "Remote",
         description: [
-            "Developed Python-based automation to parse Cisco router configurations & generate visual topology.",
-            "Implemented validation engine for network integrity (MTU mismatches, etc.).",
-            "Engineered multithreaded simulation for Day-1 network activity (OSPF discovery)."
+            "Built a Python-based network automation engine to parse Cisco router configurations and generate visual topology.",
+            "Engineered multithreaded OSPF simulation for Day-1 network activity.",
+            "Conducted performance analysis and validation for network integrity."
         ],
-        tech: ["Python", "Network Automation", "Cisco Packet Tracer"]
-    },
-    {
-        role: "AI & Cloud Technologies Intern",
-        company: "Edunet Foundation & IBM SkillsBuild",
-        duration: "2024", // Assumed year based on context, update if needed
-        location: "Remote",
-        description: [
-            "Selected for competitive, mentor-led internship on AI/Cloud technologies.",
-            "Developed end-to-end AI project using Python & IBM Watson Studio for predictive insights.",
-            "Engineered ML models to solve real-world problems & presented to industry mentors."
-        ],
-        tech: ["Python", "IBM Watson", "Machine Learning", "Cloud"]
-    },
-    {
-        role: "Virtual Internship Program",
-        company: "SmartBridge & ServiceNow",
-        duration: "2024", // Assumed
-        location: "Remote",
-        description: [
-            "Gained hands-on experience in ServiceNow Administration, Agentic AI, and Flows.",
-            "Mastered Automated Test Framework (ATF) essentials & Data Visualization.",
-            "Prepared for Certified System Administrator (CSA) Exam."
-        ],
-        tech: ["ServiceNow", "Agentic AI", "ATF", "Data Visualization"]
-    },
-    {
-        role: "Cloud Security Intern",
-        company: "AICTE - EduSkills & Zscaler",
-        duration: "Oct 2025 - Dec 2025",
-        location: "Remote",
-        description: [
-            "Completed 10-week program on Cloud Security & Zero Trust Architecture.",
-            "Gained practical knowledge in securing digital transformation using Zscaler Zero Trust Exchange.",
-            "Evaluated 'Grade O (Outstanding)' for project performance."
-        ],
-        tech: ["Cloud Security", "Zero Trust", "Zscaler"]
+        tech: ["Python", "Network Automation", "OSPF", "Cisco Packet Tracer"]
     }
 ];
 
@@ -77,7 +41,7 @@ const Experience = () => {
                 <div className="h-1 w-20 bg-neon-cyan mx-auto rounded-full shadow-[0_0_10px_#06b6d4]"></div>
             </div>
 
-            <div className="relative border-l border-gray-700 ml-4 md:ml-1/2 space-y-12">
+            <div className="relative border-l border-gray-700 ml-4 md:ml-[50%] space-y-12">
                 {experiences.map((exp, index) => (
                     <motion.div
                         key={index}

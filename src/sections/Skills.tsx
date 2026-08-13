@@ -1,14 +1,29 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import SectionWrapper from '../components/SectionWrapper';
 import GlitchText from '../components/GlitchText';
 
-const skills = [
-    "Java", "Python", "JavaScript", "C",
-    "HTML", "CSS", "React.js", "Node.js", "Express.js",
-    "Tailwind CSS", "MongoDB", "Oracle",
-    "Cloud Security", "Zero Trust", "Packet Tracer",
-    "Zscaler", "Git", "GitHub", "Visual Studio Code"
+const skillCategories = [
+    {
+        category: "Languages",
+        skills: ["Python", "JavaScript", "TypeScript", "Java", "C"]
+    },
+    {
+        category: "Web",
+        skills: ["React.js", "Node.js", "Express.js", "FastAPI", "HTML", "CSS", "Tailwind CSS", "REST APIs"]
+    },
+    {
+        category: "Databases",
+        skills: ["PostgreSQL", "Oracle DB", "MongoDB", "MySQL", "Firebase"]
+    },
+    {
+        category: "AI/ML",
+        skills: ["Scikit-learn", "SpaCy", "TF-IDF", "LLM Integration (Groq, Llama 3)", "RAG", "pgvector", "Generative AI"]
+    },
+    {
+        category: "Tools",
+        skills: ["Git/GitHub", "Postman", "Linux", "Docker", "Cisco Packet Tracer"]
+    }
 ];
 
 const Skills = () => {
@@ -21,18 +36,33 @@ const Skills = () => {
                 <div className="h-1 w-20 bg-neon-cyan mx-auto rounded-full shadow-[0_0_10px_#06b6d4]"></div>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-                {skills.map((skill, index) => (
+            <div className="space-y-10 max-w-5xl mx-auto">
+                {skillCategories.map((group, groupIndex) => (
                     <motion.div
-                        key={index}
-                        initial={{ opacity: 0, scale: 0 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        key={groupIndex}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: index * 0.05 }}
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        className="px-6 py-3 bg-gray-900 border border-gray-800 rounded-full text-gray-300 font-mono text-sm hover:border-neon-cyan hover:text-neon-cyan hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all cursor-default"
+                        transition={{ duration: 0.5, delay: groupIndex * 0.1 }}
                     >
-                        {skill}
+                        <h3 className="text-neon-cyan font-mono text-sm uppercase tracking-widest mb-4">
+                            {`// ${group.category}`}
+                        </h3>
+                        <div className="flex flex-wrap gap-3">
+                            {group.skills.map((skill, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, scale: 0 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.4, delay: groupIndex * 0.1 + index * 0.05 }}
+                                    whileHover={{ scale: 1.1, rotate: 3 }}
+                                    className="px-5 py-2.5 bg-gray-900 border border-gray-800 rounded-full text-gray-300 font-mono text-sm hover:border-neon-cyan hover:text-neon-cyan hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all cursor-default"
+                                >
+                                    {skill}
+                                </motion.div>
+                            ))}
+                        </div>
                     </motion.div>
                 ))}
             </div>

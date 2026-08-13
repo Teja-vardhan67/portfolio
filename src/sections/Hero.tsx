@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, FileText } from 'lucide-react';
@@ -31,9 +31,9 @@ const Hero = () => {
                             <Typewriter
                                 words={[
                                     'Full-Stack Developer',
-                                    'AI Enthusiast',
-                                    'Network Automation Specialist',
-                                    'Cyber Security Learner'
+                                    'AI/ML Enthusiast',
+                                    'Oracle Cloud Certified',
+                                    'CS Undergrad @ Anurag University'
                                 ]}
                                 loop={0}
                                 cursor
@@ -46,8 +46,8 @@ const Hero = () => {
                     </div>
 
                     <p className="text-gray-400 mb-10 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
-                        Crafting robust applications and securing digital infrastructures.
-                        Merging the power of AI with seamless automation to build the future of tech.
+                        Third-year B.Tech Computer Science student at Anurag University, Hyderabad (CGPA 8.29).
+                        AI/ML enthusiast building intelligent full-stack applications — from LLM-powered platforms to cloud-certified solutions.
                     </p>
 
                     <div className="flex flex-col md:flex-row items-center justify-center gap-6">
@@ -72,7 +72,7 @@ const Hero = () => {
 
                         {/* Resume Link - User should place 'resume.pdf' in the public folder */}
                         <a
-                            href="/resume.pdf"
+                            href={`${import.meta.env.BASE_URL}resume.pdf`}
                             target="_blank"
                             rel="noreferrer"
                             className="flex items-center gap-2 hover:text-neon-cyan transition-colors hover:scale-110 transform duration-200"

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Code } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
@@ -7,47 +7,29 @@ import GlitchText from '../components/GlitchText';
 const projects = [
     {
         title: "CareerCraft",
-        subtitle: "AI-Powered Career Prep Platform",
-        description: "An AI-powered platform for resume analysis, mock interviews, and job recommendations. Features ATS scoring using Google Gemini AI and a responsive React frontend.",
-        tech: ["React", "TypeScript", "Tailwind CSS", "Firebase", "Gemini AI"],
+        subtitle: "AI-Powered Career Platform",
+        description: "Full-stack AI career platform with LLM-powered mock interviews, NLP-based ATS resume scoring, TF-IDF job matching, and integrated college placement portal.",
+        tech: ["React", "FastAPI", "Groq", "SpaCy", "Scikit-learn", "Firebase", "Tailwind CSS"],
         github: "https://github.com/palankivinay272-lgtm/career-craft",
         link: "https://github.com/palankivinay272-lgtm/career-craft",
         color: "cyan"
     },
     {
-        title: "MediTrack",
-        subtitle: "Health Manager Web App",
-        description: "Patient-centric app for medication alerts and health schedule management. Integrates maps for nearby professionals and inventory tracking for medicine stock.",
-        tech: ["HTML/CSS/JS", "Third-party APIs", "Interactive Maps"],
-        github: "https://github.com/Teja-vardhan67/MediTrack",
-        link: "https://github.com/Teja-vardhan67/MediTrack",
-        color: "purple"
-    },
-    {
-        title: "LearnMate",
-        subtitle: "AI-Powered Study Buddy",
-        description: "Full-stack AI study assistant with quiz generation, note summarization, and flashcards. Built with Node.js/Express and deployed on Render.",
-        tech: ["Node.js", "Express.js", "Vanilla JS", "OpenRouter API"],
-        github: "https://github.com/Teja-vardhan67/LearnMate",
-        link: "https://github.com/Teja-vardhan67/LearnMate",
-        color: "cyan"
-    },
-    {
-        title: "AI Resume Analyzer",
-        subtitle: "Python-based Resume Parsing Tool",
-        description: "A Python application that analyzes resumes against job descriptions to provide compatibility scores and improvement suggestions.",
-        tech: ["Python", "NLP", "Machine Learning"],
-        github: "https://github.com/Teja-vardhan67/AI_Resume_Analyzer",
-        link: "https://github.com/Teja-vardhan67/AI_Resume_Analyzer",
-        color: "purple"
-    },
-    {
         title: "SmartCampus",
-        subtitle: "Complaint Management System",
-        description: "A complex complaint management system where students can post complaints for authorized personnel to resolve efficiently. 'Report Smarter, Resolve Faster'.",
-        tech: ["Web Development", "Database", "Management System"],
+        subtitle: "AI-Powered Campus Complaint System",
+        description: "AI-powered campus complaint system with NLP auto-categorisation, real-time WebSocket updates, and role-based dashboards for efficient complaint resolution.",
+        tech: ["Node.js", "Express", "MongoDB", "WebSocket", "JWT", "Firebase"],
         github: "https://github.com/palankivinay272-lgtm/SmartCampus",
-        link: "https://github.com/palankivinay272-lgtm/SmartCampus",
+        link: "https://smartcampus-3cbb4.web.app",
+        color: "purple"
+    },
+    {
+        title: "YoursVault",
+        subtitle: "Group Finance Tracker",
+        description: "Group finance tracker with role-based dashboards, atomic batch writes, secondary Firebase app pattern for friend account creation, and automated email notifications.",
+        tech: ["React", "Firebase Auth", "Firestore", "EmailJS", "Tailwind CSS"],
+        github: "https://yoursvault.web.app",
+        link: "https://yoursvault.web.app",
         color: "cyan"
     }
 ];

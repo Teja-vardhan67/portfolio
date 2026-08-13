@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Send } from 'lucide-react';
+import { Mail, Github, Linkedin, Send, Phone } from 'lucide-react';
 import SectionWrapper from '../components/SectionWrapper';
 import GlitchText from '../components/GlitchText';
 import NeonButton from '../components/NeonButton';
@@ -54,6 +54,12 @@ const Contact = () => {
                                 <Mail size={24} />
                             </div>
                             <span>tejavardhanreddy67@gmail.com</span>
+                        </a>
+                        <a href="tel:+919121770980" className="flex items-center gap-4 text-gray-300 hover:text-neon-cyan transition-colors group">
+                            <div className="p-3 bg-gray-900 rounded-lg group-hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all">
+                                <Phone size={24} />
+                            </div>
+                            <span>+91-9121770980</span>
                         </a>
                         <a href="https://linkedin.com/in/paspulatejavardhan" target="_blank" rel="noreferrer" className="flex items-center gap-4 text-gray-300 hover:text-neon-purple transition-colors group">
                             <div className="p-3 bg-gray-900 rounded-lg group-hover:shadow-[0_0_15px_rgba(168,85,247,0.3)] transition-all">
