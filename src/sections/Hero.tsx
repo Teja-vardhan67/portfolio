@@ -72,7 +72,7 @@ const Hero = () => {
 
                         {/* Resume Link - User should place 'resume.pdf' in the public folder */}
                         <a
-                            href={`${import.meta.env.BASE_URL}resume.pdf`}
+                            href={`${import.meta.env.BASE_URL}resume.pdf?v=${Date.now()}`}
                             target="_blank"
                             rel="noreferrer"
                             className="flex items-center gap-2 hover:text-neon-cyan transition-colors hover:scale-110 transform duration-200"
